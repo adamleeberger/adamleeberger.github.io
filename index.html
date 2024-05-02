@@ -1,0 +1,283 @@
+<html>
+
+<body>
+    <h1 id="cmu-10-742-machine-learning-in-healthcare">CMU 10-742: Machine Learning in Healthcare</h1>
+    <p><strong>DRAFT</strong></p>
+    <p>A graduate-level course offered in the CMU Machine Learning Department.</p>
+    <h2 id="course-description">Course Description</h2>
+    <p>Machine learning (ML) is experiencing explosive growth in healthcare, and is now top of mind for leaders at
+        hospitals, insurance companies, and pharmaceutical firms.</p>
+    <p>This course offers a survey of ML in healthcare today. Students will gain firsthand experience working with
+        electronic health records, time-series medical data, and other healthcare data sources. The course will cover
+        how ML (and AI more generally) is impacting healthcare financing, operations, and care delivery, e.g. in
+        radiology, pathology, and ophthalmology. Students will learn how to apply causal inference, anomaly detection,
+        Bayesian statistics, natural language processing, and large language models to important problems in healthcare,
+        such as predicting the future condition of a patient, and forecasting how long a patient will remain in the
+        hospital. The course will address the challenges of working responsibly with healthcare data, including
+        potential biases and inconsistencies, and provide strategies for identifying and mitigating these issues.</p>
+    <p>The class is open to graduate students in SCS. It is also open to qualified, motivated undergraduates from all
+        majors in SCS, and to students with interest and sufficient expertise in other CMU colleges. The course assumes
+        a strong competency in Python/pandas/jupyter, and hands-on experience building models (xgboost, logistic
+        regression, neural networks). No background in healthcare is expected.</p>
+    <p>The course consists of 2x/week 90-minute lectures, problem sets, and a final project. There will be no exams.</p>
+    <h2 id="schedule">Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Topic (Presenter)</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>Getting Oriented</strong></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Course Overview (AB)</td>
+                <td>Course syllabus, policies and logistics. The US healthcare system and its oddities. Why Pittsburgh?
+                    The last 50 years and the next 50 years. Hinton vs. Langlotz. <br /><br />Assignment 0
+                    Out<br />Readings: None</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Healthcare entities, data, and systems (AB)</td>
+                <td>Cast of characters in healthcare. Delegated risk. Who cares about long term health outcomes?
+                    Healthcare data and systems. Clinical data is a weak and untrustworthy proxy for ground truth.
+                    Parsing a healthcare ML research paper.<br /><br /> Assignment 1 Out
+                    <br /><strong>Readings:</strong><br /> <a
+                        href="https://www.khanacademy.org/science/health-and-medicine/health-care-system-unit/health-care-system/">Healthcare
+                        System Overview - Khan Academy</a><br /> Biases in electronic health record data due to
+                    processes within the healthcare system: retrospective observational study</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Risk Stratification (AB)</td>
+                <td>What is risk stratification? Traditional approaches. Why we seek parsimonious models, and how to
+                    build them. Evaluation. Target leakage. &quot;Looking over the physician’s shoulder.&quot;
+                    Intervention-tainted outcomes. Interpretable model (GAMs).<br /><br /> Assignment 0 Due<br />
+                    <strong>Readings:</strong><br /> &quot;Population-Level Prediction of Type 2 Diabetes From Claims
+                    Data and Analysis of Risk Factors&quot;<br />Machine learning for patient risk stratification:
+                    standing on, or looking over, the shoulders of clinicians?</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Regulation (AB)</td>
+                <td>Role of government in healthcare in general and ML+healthcare in particular. Legislation really
+                    matters: 3 case studies. Open data movement. What’s an IRB and why should you care?<br /><br />
+                    <strong>Readings:</strong> None</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>Using (and Misusing) Statistics</strong></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Statistics you need to know (AB)</td>
+                <td>Key probability distributions and examples of their use in healthcare. Hypothesis testing. Bayesian
+                    statistics. Regression analysis. Survival Analysis. Evaluation metrics. Imbalance and missing data.
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>ies, Damn Lies, And Healthcare Data (AB)</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Lies, Damn Lies, And Healthcare Data (AB)</td>
+                <td>Common types of bias in healthcare data. Debiasing techniques. Process bias: Learning the
+                    &quot;wrong thing&quot; from healthcare data. Non-stationarity of data.<br /><br />
+                    <strong>Readings:</strong><br /> [EHR Safari: Data is Contextual]<br />Dissecting racial bias in an
+                    algorithm used to manage the health of populations<br />Why Is My Classifier Discriminatory?
+                    (optional)<br /> Underdiagnosis bias of artificial intelligence algorithms applied to chest
+                    radiographs in under-served patient populations (optional)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>Paying for Healthcare</strong></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Paying for health care 1 <br /><br />(Pamela Peele)</td>
+                <td>What is health insurance, Underwriting, rate making, risk adjustment. Adverse Selection. Moral
+                    Hazard. Utilization Management. Cost-sharing: deductibles, co-insurance. Providers taking risk;
+                    ACOs. Commercial insurance. Public insurance. MLR. Measuring total cost of care. Care management.
+                    Medicare: Type A, B, C, D. Regulating bodies: CMS/HHS. Quality Metrics. MA risk delegation. Adverse
+                    selection. HCC coding. Gaming the system.<br /><strong>Readings:</strong><br /> <a href="#">Health
+                        Insurance Explained – The YouToons Have It Covered</a> [Medicare overview (video)</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Paying for Healthcare 2 <br /><br />(Pamela Peele)</td>
+                <td>Surprisingly difficult problems in population health: Care management. Provider attribution.
+                    Clustering encounters. Fraud/Waste/Abuse. Network
+                    Optimization.<br /><strong>Readings:</strong><br /> <a href="#">Finding Medicine’s Hot Spots</a> <a
+                        href="#">Disappointing Findings and Moral Courage—The Camden Health Care &quot;Hotspotting&quot;
+                        Randomized Trial</a> [Health Care Hotspotting – A Randomized, Controlled Trial</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>ML in Clinical Care</strong></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>ML + Pathology (Liron Pantanowitz)</td>
+                <td>What is pathology, Standard grading/scoring systems (e.g. PARIS). Moving to digitization. WSI:
+                    strengths and weaknesses. Image segmentation, feature extraction, classification. Case studies on
+                    cancer diagnosis. Demos of sample systems. <br /><br />Assignment 2 Due<br /> Assignment 3
+                    Out<br />Final Project Proposal Due<br /><strong>Readings:</strong> TBD</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>ML + Radiology (Shandong Wu)</td>
+                <td>Intro to radiology and its modalities: X-ray, CT, MRI.. Extraction of structured information from
+                    radiology reports using NLP techniques. Automated report generation and summarization.
+                    <br /><strong>Readings:</strong> TBD</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>ML + ophthalmology (Jay Chhablani)</td>
+                <td>Brief intro to modern ophthalmology. OCT image analysis. Diagnosing AMD, diabetic retinopathy, and
+                    glaucoma from OCT and retinal fundus. Grading cataracts. Applications to third-world medicine.
+                    Challenges with generalization across imaging devices, populations, and clinical settings.
+                    Regulatory constraints.<br /><strong>Readings:</strong><br /> <a href="#">Will Artificial
+                        Intelligence Replace Radiologists?</a> <a href="#">Augmented Intelligence: Harnessing AI for
+                        Glaucoma - American Academy of Ophthalmology</a> <a href="#">Artificial intelligence and deep
+                        learning in ophthalmology - PMC</a></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Clinical Decision Support (AB)</td>
+                <td>What is clinical decision support. Using (and learning) clinical pathways. Dynamic treatment
+                    strategies. <br /><br /><strong>Assignment 3 Due</strong> <strong>Assignment 4 Out</strong>
+                    <br /><strong>Readings:</strong><br /> <a href="#">Paving the COWpath: Learning and visualizing
+                        clinical pathways from electronic health record data</a> [The Artificial Intelligence Clinician
+                    learns optimal treatment strategies for sepsis in intensive care</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Time-series healthcare data (Zach Lipton)</td>
+                <td>TBD <br /><strong>Readings:</strong><br /> <a href="https://arxiv.org/pdf/2305.13426.pdf">Link to
+                        paper</a> <a href="#">Learning to Diagnose with LSTM Recurrent Neural Networks</a> <a
+                        href="#">Modeling Missing Data in Clinical Time Series with RNNs</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Anomaly detection (Milos Hauskrecht)</td>
+                <td><br /><strong>Readings:</strong><br /> <a href="#">Outlier detection for patient monitoring and
+                        alerting - ScienceDirect</a> [Constrained transformer network for ECG signal processing and
+                    arrhythmia classification</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>Working with EHR Data</strong></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Structured Clinical Data (AB)</td>
+                <td>Processing clinical data for machine learning. Deep Patient. <br /><br />Assignment 4
+                    Due<br /><strong>Readings:</strong><br /> [Deep Patient: An Unsupervised Representation to Predict
+                    the Future of Patients from the Electronic Health Records</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Clinical notes (AB)</td>
+                <td>Why do we have clinical notes? Challenges with clinical notes. Classic NLP approaches. Modern ML
+                    methods. Clinical embeddings using word2vec and BERT.<br /><strong>Readings:</strong> <br /><a
+                        href="#">Clinical Concept Embeddings Learned from Massive Sources of Multimodal Medical Data -
+                        PMC</a></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Clinical trial matching using LLMs (Michael Wornow)</td>
+                <td>[1904.05342] ClinicalBERT: Modeling Clinical Notes and Predicting Hospital Readmission (optional)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>Precision Medicine</strong></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Omics 1 (Carl Kingsford)</td>
+                <td>Omics survey. ML techniques for omics: SVMs, random forest, DL. Dimensionality reduction.
+                    Clustering. CNNs for sequence analysis. RNNs for time-sequence data.<br /><strong>Readings:</strong>
+                    <br /><a href="#">DeepPhe: A Natural Language Processing System for Extracting Cancer Phenotypes
+                        from Clinical Records</a></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Omics 2 (Carl Kingsford)</td>
+                <td>Variant calling. GWAS. Personalized medicine and pharmacogenomics; predicting therapy response. Gene
+                    expression analysis. Protein folding prediction. Biomarker discovery. DeepPhe project. All of Us
+                    initiative. DL in Drug Discovery<br /><strong>Readings:</strong><br /> <a href="#">Precision
+                        Oncology beyond Targeted Therapy: Combining Omics Data with Machine Learning Matches the
+                        Majority of Cancer Cells to Effective Therapeutics (optional)</a> <a href="#">Machine learning
+                        predicts individual cancer patient responses to therapeutic drugs with high accuracy - PMC
+                        (optional)</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>Study Design and Forecasting</strong></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Causal inference (Colin Gray)</td>
+                <td>What is causal discovery. Propensity scoring. Danger of missing features in ML vs missing features
+                    in causal discovery. Covariate adjustment. &quot;Asthmatics admissions do better in the
+                    hospital&quot; fallacy. Simpson’s paradox.<br /><strong>Readings:</strong><br /> TBD</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>Bayesian Clinical Trials (Andy King)</td>
+                <td>Review of Bayes Rule and Bayesian statistics. Bayesian vs &quot;classical&quot; (frequentist)
+                    approach to clinical trials. Advantages and disadvantages. Selecting and updating a prior.
+                    Multi-armed bandit problem. REMAP-CAP project and applications to
+                    Covid19.<br /><strong>Readings:</strong><br /> <a href="#">Berry paper</a> <a href="#">REMAP-CAP
+                        paper</a></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Epidemiological modeling and forecasting (Roni Rosenfeld)</td>
+                <td><br /> <strong>Readings:</strong><br /> TBD</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>Wrap Up</strong></td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Ambient Scribe (Zack Lipton)</td>
+                <td><br /><strong>Readings:</strong> <br /><a href="#">Generating more faithful and consistent SOAP
+                        notes using attribute-specific parameters</a><br /><a href="#">Language models are an effective
+                        representation learning technique for electronic health record data - ScienceDirect</a></td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>Final project - poster presentations (AB)</td>
+                <td>Class members will present their final project to the public in a traditional conference poster
+                    session setting.</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
