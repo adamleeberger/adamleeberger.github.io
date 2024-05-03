@@ -1,11 +1,28 @@
 <html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>
+<style>
+    .grey-background {
+        background-color: #c0c0c0;
+    }
+</style>
 
 <body>
     <h1 id="cmu-10-742-machine-learning-in-healthcare">CMU 10-742: Machine Learning in Healthcare</h1>
     <p><strong>DRAFT of May 1 2024</strong></p>
     <h2 id="course-description">Course Overview</h2>
     <p>Machine learning (ML) is experiencing explosive growth in healthcare, and is now top of mind for leaders at
-        hospitals, insurance companies, and pharmaceutical firms. This course offers a survey of ML in healthcare today. Students will gain firsthand experience working with
+        hospitals, insurance companies, and pharmaceutical firms. This course offers a survey of ML in healthcare today.
+        Students will gain firsthand experience working with
         electronic health records, time-series medical data, and other healthcare data sources. The course will cover
         how ML (and AI more generally) is impacting healthcare financing, operations, and care delivery, e.g. in
         radiology, pathology, and ophthalmology. Students will learn how to apply causal inference, anomaly detection,
@@ -17,7 +34,7 @@
         majors in SCS, and to students with interest and sufficient expertise in other CMU colleges. The course assumes
         a strong competency in Python/pandas/jupyter, and hands-on experience building models (xgboost, logistic
         regression, neural networks). No background in healthcare is expected.</p>
-    <p>The course consists of 2x/week 90-minute lectures, problem sets, and a final project. There will be no exams.</p>
+    <p>The course consists of twice weekly lectures, problem sets, and a final project. There will be no exams.</p>
     <h2 id="schedule">Schedule</h2>
     <table>
         <thead>
@@ -28,78 +45,93 @@
             </tr>
         </thead>
         <tbody>
-            <tr/>
-            <tr/>
-            
             <tr>
-                <td colspan="3"><strong>Getting Oriented</strong></td>
-              </tr>
-             <tr>
+                <td colspan="3" class="grey-background"><strong>Part 1: Getting Oriented</strong></td>
+            </tr>
+            <tr>
                 <td>1</td>
                 <td>Course Overview (AB)</td>
                 <td>Course syllabus, policies and logistics. The US healthcare system and its oddities. Why Pittsburgh?
-                    The last 50 years and the next 50 years. Hinton vs. Langlotz. <br /><br />Assignment 0
-                    Out<br />Readings: None</td>
+                    The last 50 years and the next 50 years. Healthcare data is different. Hinton vs. Langlotz. <br /><br /><b>Assignment 0
+                    Out</b><br/><br/><b>Readings: None</b></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Healthcare entities, data, and systems (AB)</td>
                 <td>Cast of characters in healthcare. Delegated risk. Who cares about long term health outcomes?
                     Healthcare data and systems. Clinical data is a weak and untrustworthy proxy for ground truth.
-                    Parsing a healthcare ML research paper.<br /><br /> Assignment 1 Out
-                    <br /><strong>Readings:</strong><br /> <a
-                        href="https://www.khanacademy.org/science/health-and-medicine/health-care-system-unit/health-care-system/">Healthcare
-                        System Overview - Khan Academy</a><br /> Biases in electronic health record data due to
-                    processes within the healthcare system: retrospective observational study</td>
+                    Parsing a healthcare ML research paper.<br /><br /> <b>Assignment 1 Out</b>
+                    <br /><br /></br.><b>Readings:</b><br /> 
+                        <ul>
+                        <li/><a href="https://www.khanacademy.org/science/health-and-medicine/health-care-system-unit/health-care-system/">Healthcare
+                        System Overview - Khan Academy</a><br /> 
+                        <li/><a
+                        href="https://www.bmj.com/content/361/bmj.k1479">Biases in electronic health record data due to
+                        processes within the healthcare system: retrospective observational study</a>
+                    <br /><li/><a
+                        href="https://www.commonwealthfund.org/international-health-policy-center/countries/united-states">United
+                        States | International Health Care System Profiles | Commonwealth Fund (optional)</a>
+                    </ul>
+                    </td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>Risk Stratification (AB)</td>
                 <td>What is risk stratification? Traditional approaches. Why we seek parsimonious models, and how to
                     build them. Evaluation. Target leakage. &quot;Looking over the physician’s shoulder.&quot;
-                    Intervention-tainted outcomes. Interpretable model (GAMs).<br /><br /> Assignment 0 Due<br />
-                    <strong>Readings:</strong><br /> &quot;Population-Level Prediction of Type 2 Diabetes From Claims
-                    Data and Analysis of Risk Factors&quot;<br />Machine learning for patient risk stratification:
-                    standing on, or looking over, the shoulders of clinicians?</td>
+                    Intervention-tainted outcomes. Interpretable model (GAMs).<br /><br /> 
+                    
+                    <b>Assignment 0 Due</b><br />
+                    <strong>Readings:</strong><br /> 
+                    <ul>
+                    <li/><a href="https://www.liebertpub.com/doi/10.1089/big.2015.0020">Population-Level Prediction of Type 2 Diabetes From Claims
+                    Data and Analysis of Risk Factors</a><br />
+                    <li/><a href="https://www.nature.com/articles/s41746-021-00426-3">Machine learning for patient risk stratification:
+                    standing on, or looking over, the shoulders of clinicians?</a><br />
+                </td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>Regulation (AB)</td>
                 <td>Role of government in healthcare in general and ML+healthcare in particular. Legislation really
                     matters: 3 case studies. Open data movement. What’s an IRB and why should you care?<br /><br />
-                    <strong>Readings:</strong> None</td>
+                    <strong>Readings:</strong> None
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td><strong>Using (and Misusing) Statistics</strong></td>
+                <td colspan="3" class="grey-background"><strong>Part 2: Using (and Misusing) Data</strong></td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>Statistics you need to know (AB)</td>
                 <td>Key probability distributions and examples of their use in healthcare. Hypothesis testing. Bayesian
                     statistics. Regression analysis. Survival Analysis. Evaluation metrics. Imbalance and missing data.
+
+                 <br/><br/>
+                 <strong>Readings:</strong> None       
                 </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>ies, Damn Lies, And Healthcare Data (AB)</td>
             </tr>
             <tr>
                 <td>6</td>
                 <td>Lies, Damn Lies, And Healthcare Data (AB)</td>
                 <td>Common types of bias in healthcare data. Debiasing techniques. Process bias: Learning the
                     &quot;wrong thing&quot; from healthcare data. Non-stationarity of data.<br /><br />
-                    <strong>Readings:</strong><br /> [EHR Safari: Data is Contextual]<br />Dissecting racial bias in an
-                    algorithm used to manage the health of populations<br />Why Is My Classifier Discriminatory?
-                    (optional)<br /> Underdiagnosis bias of artificial intelligence algorithms applied to chest
-                    radiographs in under-served patient populations (optional)</td>
+                    
+                    
+                    <strong>Readings:</strong><br /> 
+                    <ul>
+                        <li/><a href="https://proceedings.mlr.press/v182/boag22a/boag22a.pdf">EHR Safari: Data is Contextual</a><br />
+                        <li/><a href="https://www.science.org/doi/10.1126/science.aax2342?ijkey=EUVkYeQaORypo&keytype=ref&siteid=sci">Dissecting racial bias in an
+                    algorithm used to manage the health of populations</a> 
+                        <li/><a href="https://arxiv.org/pdf/1805.12002.pdf">Why Is My Classifier Discriminatory?</a> 
+                    (optional)</a>  
+                    <li/><a href="https://www.nature.com/articles/s41591-021-01595-0">Underdiagnosis bias of artificial intelligence algorithms applied to chest
+                    radiographs in under-served patient populations (optional)</a>
+                </ul>
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td><strong>Paying for Healthcare</strong></td>
+                <td colspan="3" class="grey-background"><strong>Part 3: Paying for Healthcare</strong></td>
             </tr>
             <tr>
                 <td>7</td>
@@ -121,9 +153,7 @@
                         Randomized Trial</a> [Health Care Hotspotting – A Randomized, Controlled Trial</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td><strong>ML in Clinical Care</strong></td>
+                <td colspan="3" class="grey-background"><strong>Part 4: ML in Clinical Care</strong></td>
             </tr>
             <tr>
                 <td>9</td>
@@ -138,7 +168,8 @@
                 <td>ML + Radiology (Shandong Wu)</td>
                 <td>Intro to radiology and its modalities: X-ray, CT, MRI.. Extraction of structured information from
                     radiology reports using NLP techniques. Automated report generation and summarization.
-                    <br /><strong>Readings:</strong> TBD</td>
+                    <br /><strong>Readings:</strong> TBD
+                </td>
             </tr>
             <tr>
                 <td>11</td>
@@ -158,7 +189,8 @@
                     strategies. <br /><br /><strong>Assignment 3 Due</strong> <strong>Assignment 4 Out</strong>
                     <br /><strong>Readings:</strong><br /> <a href="#">Paving the COWpath: Learning and visualizing
                         clinical pathways from electronic health record data</a> [The Artificial Intelligence Clinician
-                    learns optimal treatment strategies for sepsis in intensive care</td>
+                    learns optimal treatment strategies for sepsis in intensive care
+                </td>
             </tr>
             <tr>
                 <td>13</td>
@@ -168,11 +200,6 @@
                         href="#">Modeling Missing Data in Clinical Time Series with RNNs</a></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
                 <td>14</td>
                 <td>Anomaly detection (Milos Hauskrecht)</td>
                 <td><br /><strong>Readings:</strong><br /> <a href="#">Outlier detection for patient monitoring and
@@ -180,9 +207,7 @@
                     arrhythmia classification</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td><strong>Working with EHR Data</strong></td>
+                <td colspan="3" class="grey-background"><strong>Part 5: Working with EHR Data</strong></td>
             </tr>
             <tr>
                 <td>15</td>
@@ -206,9 +231,7 @@
                 </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td><strong>Precision Medicine</strong></td>
+                <td colspan="3" class="grey-background"><strong>Part 6: Precision Medicine</strong></td>
             </tr>
             <tr>
                 <td>18</td>
@@ -216,7 +239,8 @@
                 <td>Omics survey. ML techniques for omics: SVMs, random forest, DL. Dimensionality reduction.
                     Clustering. CNNs for sequence analysis. RNNs for time-sequence data.<br /><strong>Readings:</strong>
                     <br /><a href="#">DeepPhe: A Natural Language Processing System for Extracting Cancer Phenotypes
-                        from Clinical Records</a></td>
+                        from Clinical Records</a>
+                </td>
             </tr>
             <tr>
                 <td>19</td>
@@ -230,9 +254,7 @@
                         (optional)</a></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td><strong>Study Design and Forecasting</strong></td>
+                <td colspan="3" class="grey-background"><strong>Part 7: Study Design and Forecasting</strong></td>
             </tr>
             <tr>
                 <td>20</td>
@@ -256,9 +278,7 @@
                 <td><br /> <strong>Readings:</strong><br /> TBD</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td><strong>Wrap Up</strong></td>
+                <td colspan="3" class="grey-background"><strong>Part 8: Wrap up</strong></td>
             </tr>
             <tr>
                 <td>23</td>
@@ -276,7 +296,163 @@
         </tbody>
     </table>
 
+    <h2> Course Policies</h2>
 
+    <b>Attendance</b>
+
+    <p>We expect that students will attend class in person. We do not support remote participation in lectures and will
+        not record/stream the lectures. In an age of virtual / asynchronous learning, this may seem retrograde. But
+        there’s a good reason we insist on in-person participation. Pittsburgh is the epicenter of health technology
+        research, and we’ve managed to convince some of the leading minds in healthcare/AI to deliver lectures on their
+        topics of expertise. We can&apos;t have them presenting to an empty lecture hall. We will take attendance at all
+        lectures, and attendance at lectures delivered by a guest lecturer is an important ingredient in your final
+        course grade. We understand that people have conflicts and get ill, and in recognition of that, we consider two
+        absences equivalent to full attendance.</p>
+
+    <b>Collaboration and Use of Third Party Tools/Libraries/Repos</b>
+
+    <p>For the assignments – including the final project, you are welcome to use any generative AI tool to generate or
+        check your source code or accompanying text. You are also welcome to fork an existing github repo, so long as
+        that repo does not belong to a fellow class member or a student from a previous version of this class. Having
+        said that, any work you turn in is your responsibility. Know that you will learn much more from working through
+        any problem than from copying its answer from a tool or other source. Much good can come from using generative
+        AI, but much risk arises when you adopt the output of such a tool without completely understanding it.
+
+        For the final project, you may work alone or in groups of two students at most. Groups should create a single
+        poster/writeup.
+
+        You may work alone or in groups for the assignments and final project. Each student must write up and turn in
+        their own assignment. On every problem set, you must identify your collaborators. If you did not discuss the
+        problem set with anyone, you should write “Collaborators: none." You must acknowledge all sources (e.g.
+        Wikipedia, a website, a genAI tool) in your assignment. It is a violation of this policy to submit a problem
+        solution that you cannot orally explain to a member of the course staff. Plagiarism and other dishonest behavior
+        cannot be tolerated in any academic environment. If you have any questions about the collaboration policy, or if
+        you feel that you may have violated the policy, please talk to one of the course staff.</p>
+
+    <b>Late Policy</b>
+
+    <p>This course&apos;s late policy is simple: hand all your assignments in on time. If there is a truly extenuating
+        circumstance, reach out to the instructor directly. It is not an extenuating circumstance that you did not plan
+        ahead or have many other assignments due the same day. This course staff is simply unable to manage the tracking
+        and analysis that comes with a complicated late policy where each student gets a budget of late days to use
+        during the semester.</p>
+
+
+    <b>Pedagogical Sequencing</b>
+    <p>We are intentionally front-loading the problem sets in the semester so that you can focus on your final projects
+        in the second half of the semester, which means that some course material will appear in a problem set before it
+        is presented in a lecture. That is a feature, not a bug. Especially when we expect you are seeing material for
+        the first time, we will make every effort to explain the material carefully and completely in the problem set.
+    </p>
+
+    <h2> Grading</h2>
+
+    Your grade will derive from the following:<br />
+
+    <li />Problem sets: 40 points (point allocation marked on each problem set)
+    <li />Final project: 30 points
+    <li />Attendance at lectures: 20 points
+    <li />Participation/Instructor discretion: 10 points
+
+    Your final grade will be out of 100 points.
+
+    <h2>Final Project</h2>
+
+    <p>The final project is an opportunity to follow your curiosity, go deep in a particular healthcare domain and
+        dataset, and build something interesting.
+
+        You are responsible for coming up with a project idea and delivering a 1-page proposal to the course staff by
+        Milestone 1 (see below), and iterating on the proposal until you receive approval from the instructor. You will
+        then implement the project and present it to the course staff and a broader CMU audience in a public poster
+        session, similar to what you would experience at any academic conference.
+
+        It is not required that you develop something novel and publishable. A perfectly acceptable, full-credit final
+        project would be to replicate (perhaps with your own twists) an existing result from the literature.
+
+        Before submitting your proposal to the course staff, be sure to ask yourself these questions:
+
+    <ul>
+        <li />Does this project address a meaningful problem in healthcare? The first third of the course will help you
+        make an informed assessment.
+        <li />Does this project rely on machine learning (supervised or unsupervised)? Healthcare analytics projects are
+        important and interesting, but this is an ML class.
+    </ul>
+
+    Some popular, public healthcare datasets you may wish to consider:</p>
+
+    <ol>
+        <li />MIMIC
+        <li />The Cancer Imaging Archive
+        <li />The National Cancer Institute ‘SEER’ data
+        <li />Human Connectome Project (HCP)
+        <li />CDC data
+        <li />CMS data
+        <li />Human Mortality Database
+        <li />Kaggle also has many healthcare datasets and so does this: https://github.com/beamandrew/medical-data
+    </ol>
+
+    Some of these may require paperwork/approval to get access, so plan ahead. <br /><br />
+
+    <b>Sample ideas</b>
+
+    <p>Here’s some example ideas for a project - to get you calibrated on the scope and complexity we expect.</p>
+
+    <ul>
+        <li />Participate (retroactively!) in the 2018 RSNA Pneumonia challenge: XXXX the winnign entries were pretty
+        complicated in using mixture of experts, …. Explore different aspects of winning entries – many notebooks
+        published – provide links —
+
+
+        <li /><i>Patient embedding</i>: Loosely following the work described in the DeepPatient paper, build an embedding model
+        for patients. See if you can show some “interesting” results for patients in the embedding space - for example,
+        “similar” patients are close in the embedding space.
+
+
+        <li /><i>Quality of care assessment</i>: Use CMS data to build a model that predicts the quality of care provided by
+        healthcare providers and institutions. (You will need to define ‘quality’). You may wish to look at datasets
+        containing, for example, hospital readmissions, mortality rates, and patient satisfaction data. What features
+        are most associated with high-quality care?
+
+        <li /><i>Question answering (Q/A) on EMRs</i>: The typical EMR patient record contains a vast amount of information,
+        especially for older patients with chronic diseases. A high-quality Q/A system can allow physicians to to
+        quickly retrieve specific information from a patient chart by asking natural language questions, instead of
+        manually searching through pages and pages of information. Use a base model like ClinicalBERT and attach a Q/A
+        head on top of this model, which you will probably want to train using an annotated clinical question-answering
+        dataset (e.g. emrQA).
+
+
+        <li /><i>Multimodal AI</i>: There are more and more public multimodal healthcare datasets becoming available,
+        consisting of (for example) images and associated metadata. One example is the ISIC dataset of skin lesions
+        (here), which contains images of skin lesions along with corresponding clinical information, such as lesion
+        location, patient demographics, and textual descriptions. Use a pre-trained convolutional neural network (CNN)
+        model, such as ResNet,, to extract visual features from the dermatoscopic images. In parallel, use a pre-trained
+        language model, such as BERT or BioBERT, to extract textual features from the clinical notes. Explore different
+        techniques for fusing the visual and textual features. Report on the models’ performance on a test set. Use a
+        tool like grad-CAM to generate heatmaps to show which parts of an image are most influencing the model.
+
+
+        <li />For other ideas for a project, have a look at this great survey paper from 2022.
+    </ul>
+
+    <b>Milestones</b>
+
+    <p>The Final Project will have three milestones during the semester:</p>
+    <ul>
+        <li />Milestone 1 (Oct 10): Submit project proposal
+        <li />Milestone 2 (Nov 10): Submit 1-page progress report, describing work completed and pending
+        <li />Milestone 3 (last lecture): Poster session / live demo. Submit writeup.
+    </ul>
+
+    <h2> Credit</h2>
+    <p>This course derives inspiration from MIT 6.7930, a course in machine learning that MIT has offered since 2017. To
+        our knowledge, that course is the first and (until now) only course on ML+Healthcare offered for credit to
+        enrolled university students. MIT has kindly put the course material under their OCW license, and we have drawn
+        selectively from that material in constructing lectures and problem sets for this course. We thank Professor
+        Szolovits and Sontag for their permission (granted directly and through OCW) to adapt the 6.7930 material for
+        this course. Any errors in this (CMU) course material is, of course, the responsibility of the instructor—not
+        them or MIT.</p>
+
+    EOF
 </body>
 
 </html>
