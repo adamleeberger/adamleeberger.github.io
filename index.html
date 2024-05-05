@@ -73,6 +73,12 @@
                 </div>
             </div>
 
+<em>
+
+NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, LECTURERS, AND POLICIES MAY STILL CHANGE.
+</em>
+
+  
             <div id="Overview">
                 <h1>Course Overview</h1>
 
@@ -690,7 +696,7 @@
                 poster
                 session, similar to what you would experience at an academic conference.</p>
 
-                <p>It is not required that you develop something novel and publishable. A perfectly acceptable, full-credit
+                <p>It is NOT required that you develop something novel and publishable. A perfectly acceptable, full-credit
                 final
                 project would be to replicate (perhaps with your own twists) an existing result from the literature.
 
@@ -718,6 +724,60 @@
                 <li/> Shortcomings of your work
             </ul>
 
+            <b>Sample ideas</b>
+
+            <p>Here’s some example ideas for a project - to get you calibrated on the scope and complexity we expect.
+            </p>
+
+            <ul>
+                <li />Participate (retrospectively, of course) in the <a href="https://www.kaggle.com/c/rsna-pneumonia-detection-challenge/data">2018 RSNA Pneumonia challenge</a>.  
+
+                <li /><i>Patient embedding</i>: Loosely following the work described in the DeepPatient paper, build an
+                embedding model
+                for patients. Can you build a high-performing parsimious embedding model? By 'parsimonious', here we mean that the 
+                embedding only relies on a very small set of features, which makes the embedding model easier to adopt.
+                 
+
+                <li /><i>Question answering (Q/A) on EMRs</i>: The typical EMR patient record contains a vast amount of
+                information,
+                especially for older patients with chronic diseases. A high-quality Q/A system can allow physicians to
+                to
+                quickly retrieve specific information from a patient chart by asking natural language questions, instead
+                of
+                manually searching through pages and pages of information. Use a base model like ClinicalBERT and attach
+                a Q/A
+                head on top of this model, which you will probably want to train using an annotated clinical
+                question-answering
+                dataset (e.g. emrQA).
+
+                <li /><i>Quality of care assessment</i>: Use CMS data to build a model that predicts the quality of care
+                provided by
+                healthcare providers and institutions. (You will need to define ‘quality’). You may wish to look at
+                datasets
+                containing, for example, hospital readmissions, mortality rates, and patient satisfaction data. What
+                features
+                are most associated with high-quality care?
+
+                <li /><i>Multimodal AI</i>: There are more and more public multimodal healthcare datasets becoming
+                available,
+                consisting of (for example) images and associated metadata. One example is the ISIC dataset of skin
+                lesions
+                (here), which contains images of skin lesions along with corresponding clinical information, such as
+                lesion
+                location, patient demographics, and textual descriptions. Use a pre-trained convolutional neural network
+                (CNN)
+                model, such as ResNet,, to extract visual features from the dermatoscopic images. In parallel, use a
+                pre-trained
+                language model, such as BERT or BioBERT, to extract textual features from the clinical notes. Explore
+                different
+                techniques for fusing the visual and textual features. Report on the models’ performance on a test set.
+                Use a
+                tool like grad-CAM to generate heatmaps to show which parts of an image are most influencing the model.
+
+
+                <li />For other ideas for a project, have a look at this <a href="https://arxiv.org/pdf/2107.02975">survey paper</a>.
+            </ul>
+
             Some popular, public healthcare datasets you may wish to consider:</p>
 
             <ol>
@@ -737,63 +797,6 @@
             </ol>
 
             Some of these datasets may require paperwork/approval to get access, so plan ahead. <br /><br />
-
-            <b>Sample ideas</b>
-
-            <p>Here’s some example ideas for a project - to get you calibrated on the scope and complexity we expect.
-            </p>
-
-            <ul>
-                <li />Participate (retrospectively, of course) in the <a href="https://www.kaggle.com/c/rsna-pneumonia-detection-challenge/data">2018 RSNA Pneumonia challenge</a>.  
-
-                <li /><i>Patient embedding</i>: Loosely following the work described in the DeepPatient paper, build an
-                embedding model
-                for patients. See if you can show some “interesting” results for patients in the embedding space - for
-                example,
-                “similar” patients are close in the embedding space.
-
-
-                <li /><i>Question answering (Q/A) on EMRs</i>: The typical EMR patient record contains a vast amount of
-                information,
-                especially for older patients with chronic diseases. A high-quality Q/A system can allow physicians to
-                to
-                quickly retrieve specific information from a patient chart by asking natural language questions, instead
-                of
-                manually searching through pages and pages of information. Use a base model like ClinicalBERT and attach
-                a Q/A
-                head on top of this model, which you will probably want to train using an annotated clinical
-                question-answering
-                dataset (e.g. emrQA).
-                
-                <li /><i>Quality of care assessment</i>: Use CMS data to build a model that predicts the quality of care
-                provided by
-                healthcare providers and institutions. (You will need to define ‘quality’). You may wish to look at
-                datasets
-                containing, for example, hospital readmissions, mortality rates, and patient satisfaction data. What
-                features
-                are most associated with high-quality care?
-
-
-
-                <li /><i>Multimodal AI</i>: There are more and more public multimodal healthcare datasets becoming
-                available,
-                consisting of (for example) images and associated metadata. One example is the ISIC dataset of skin
-                lesions
-                (here), which contains images of skin lesions along with corresponding clinical information, such as
-                lesion
-                location, patient demographics, and textual descriptions. Use a pre-trained convolutional neural network
-                (CNN)
-                model, such as ResNet,, to extract visual features from the dermatoscopic images. In parallel, use a
-                pre-trained
-                language model, such as BERT or BioBERT, to extract textual features from the clinical notes. Explore
-                different
-                techniques for fusing the visual and textual features. Report on the models’ performance on a test set.
-                Use a
-                tool like grad-CAM to generate heatmaps to show which parts of an image are most influencing the model.
-
-
-                <li />For other ideas for a project, have a look at this great survey paper from 2022.
-            </ul>
 
             <b>Milestones</b>
 
