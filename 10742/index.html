@@ -87,28 +87,26 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                     hospitals, insurance companies, and pharmaceutical firms. This course offers a survey of ML in
                     healthcare today.
                     Students will gain firsthand experience working with
-                    electronic health records, time-series medical data, and other healthcare data sources. The course
+                    electronic health records, time-series medical data, health insurance ("administrative") data, and many 
+                    other healthcare data sources. The course
                     will cover
-                    how ML (and AI more generally) is impacting healthcare financing, operations, and care delivery,
-                    e.g. in
-                    radiology, pathology, and ophthalmology. Students will learn how to apply causal inference, anomaly
-                    detection,
-                    Bayesian statistics, natural language processing, and large language models to important problems in
-                    healthcare,
-                    such as predicting the future condition of a patient, and forecasting how long a patient will remain
+                    how ML (and AI more generally) is impacting healthcare financing, operations, and care delivery, with 
+                    select 'deep dives' into radiology, pathology, and ophthalmology. Students will learn how to apply ML methods to 
+                    important problems in healthcare,
+                    such as predicting disease onset and forecasting how long a patient will remain
                     in the
                     hospital. The course will address the challenges of working responsibly with healthcare data,
                     including
-                    potential biases and inconsistencies, and provide strategies for identifying and mitigating these
+                    potential biases and inconsistencies and confounders, and provide strategies for identifying and mitigating these
                     issues.</p>
                 <p>The class is open to graduate students in SCS. It is also open to qualified, motivated undergraduates
                     from all
                     majors in SCS, and to students with interest and sufficient expertise in other CMU colleges. The
                     course assumes
-                    a strong competency in Python/pandas/jupyter, and hands-on experience building models (xgboost,
+                    a strong competency in Python/pandas/jupyter, and hands-on experience building models such as xgboost,
                     logistic
-                    regression, neural networks). No background in healthcare is expected.</p>
-                <p>The course consists of twice weekly lectures, problem sets, and a final project. There will be no
+                    regression, neural networks. No background in healthcare is expected.</p>
+                <p>The course consists of twice weekly lectures with assigned readings, problem sets, and a final project. There will be no
                     exams.</p>
 
             </div>
@@ -133,10 +131,10 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                             <td>Course Overview<br />(AB)</td>
                             <td>Course syllabus, policies and logistics. The US healthcare system and its oddities. Why
                                 Pittsburgh?
-                                The last 50 years and the next 50 years. Healthcare data is different. Hinton vs.
+                                The last 50 years and the next 50 years. Healthcare data is dirty, incomplete, and untrustworthy. Hinton vs.
                                 Langlotz.
                                 <br /><br /><b>Assignment 0
-                                    Out</b><br /><br /><b>Readings: None</b>
+                                    Out</b><br /><br /><b>Prerequisite readings: None</b>
                             </td>
                         </tr>
                         <tr>
@@ -147,7 +145,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 Healthcare data and systems. Clinical data is a weak and untrustworthy proxy for ground
                                 truth.
                                 Parsing a healthcare ML research paper.<br /><br /> <b>Assignment 1 Out</b>
-                                <br /><br /></br.><b>Readings:</b><br />
+                                <br /><br /></br.><b>Prerequisite readings:</b><br />
                                 <ul>
                                     <li /><a
                                         href="https://www.khanacademy.org/science/health-and-medicine/health-care-system-unit/health-care-system/v/healthcare-system-overview">Healthcare
@@ -159,8 +157,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                         processes within the healthcare system: retrospective observational study</a>
                                     <br />
                                     <li />(Optional) <a
-                                        href="https://www.commonwealthfund.org/international-health-policy-center/countries/united-states">United
-                                        States | International Health Care System Profiles | Commonwealth Fund</a>
+                                        href="https://www.commonwealthfund.org/international-health-policy-center/countries/united-states">Commonwealth Fund Overiew of US Healthcare System</a>
                                 </ul>
                             </td>
                         </tr>
@@ -168,14 +165,12 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                             <td>3</td>
                             <td>Risk Stratification<br />(AB)</td>
                             <td>What is risk stratification? Traditional approaches. Why we seek parsimonious models,
-                                and
-                                how to
-                                build them. Evaluation. Target leakage. &quot;Looking over the physician’s
-                                shoulder.&quot;
-                                Intervention-tainted outcomes. Interpretable model (GAMs).<br /><br />
+                                and how to build them. Evaluation. Target leakage. &quot;Looking over the physician’s
+                                shoulder.&quot; The benefits of using administrative vs. clinical data. 
+                                Intervention-tainted outcomes. Interpretable models (GAMs).<br /><br />
 
                                 <b>Assignment 0 Due</b><br />
-                                <strong>Readings:</strong><br />
+                                <strong>Prerequisite readings:</strong><br />
                                 <ul>
                                     <li /><a
                                         href="https://www.liebertpub.com/doi/10.1089/big.2015.0020">Population-Level
@@ -191,7 +186,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 really
                                 matters: 3 case studies. Open data movement. What’s an IRB and why should you
                                 care?<br /><br />
-                                <strong>Readings:</strong> None
+                                <strong>Prerequisite readings:</strong> None
                             </td>
                         </tr>
                         <tr>
@@ -202,24 +197,22 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                             <td>5</td>
                             <td>Statistics you need to know<br />(AB)</td>
                             <td>Key probability distributions and examples of their use in healthcare. Hypothesis
-                                testing.
-                                Bayesian
-                                statistics. Regression analysis. Survival Analysis. Evaluation metrics. Imbalance and
+                                testing.  Bayesian statistics. Regression analysis. Survival Analysis. Evaluation metrics. Imbalance and
                                 missing data.
 
                                 <br /><br />
-                                <strong>Readings:</strong> None
+                                <strong>Prerequisite readings:</strong> None
                             </td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td>Lies, Damn Lies, And Healthcare Data<br />(AB)</td>
                             <td>Common types of bias in healthcare data. Debiasing techniques. Process bias: Learning
-                                the
-                                &quot;wrong thing&quot; from healthcare data. Non-stationarity of data.<br /><br />
+                                the &quot;wrong thing&quot; from healthcare data. Non-stationarity of data. 
+                                Datasheets for datasets.<br /><br />
 
 
-                                <strong>Readings:</strong><br />
+                                <strong>Prerequisite readings:</strong><br />
                                 <ul>
                                     <li /><a href="https://proceedings.mlr.press/v182/boag22a/boag22a.pdf">EHR Safari:
                                         Data
@@ -257,13 +250,13 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 Adverse
                                 selection. HCC coding. Gaming the system.<br /><br />
 
-                                <strong>Readings:</strong><br />
+                                <strong>Prerequisite readings:</strong><br />
                                 <ul>
                                     <li /><a href="https://www.youtube.com/watch?v=-58VD3z7ZiQ">Health
                                         Insurance Explained – The YouToons Have It Covered</a>
                                     <li /><a
                                         href="https://www.khanacademy.org/science/health-and-medicine/health-care-system-unit/health-care-system/v/medicare-overview">Medicare
-                                        overview (video) | Khan Academy</a>
+                                        overview | Khan Academy</a>
                             </td>
                             </ul>
 
@@ -275,7 +268,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 attribution.
                                 Clustering encounters. Fraud/Waste/Abuse. Network Optimization.<br /><br />
 
-                                <strong>Readings:</strong>
+                                <strong>Prerequisite readings:</strong>
                                 <ul>
                                     <li /><a
                                         href="https://www.newyorker.com/magazine/2011/01/24/the-hot-spotters">Finding
@@ -286,8 +279,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                         &quot;Hotspotting&quot;
                                         Randomized Trial</a>
                                     <li /> <a href="https://www.nejm.org/doi/full/10.1056/NEJMsa1906848">Health Care
-                                        Hotspotting – A
-                                        Randomized, Controlled Trial</a>
+                                        Hotspotting – A Randomized, Controlled Trial</a>
                                 </ul>
                             </td>
                         </tr>
@@ -306,19 +298,19 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 3
                                 Out<br />Final Project Proposal Due<br /><br />
 
-                                <strong>Readings:</strong> TBD
+                                <strong>Prerequisite readings:</strong> TBD
                             </td>
                         </tr>
                         <tr>
                             <td>10</td>
                             <td>ML + Radiology<br />(Shandong Wu)</td>
-                            <td>Intro to radiology and its modalities: X-ray, CT, MRI.. Extraction of structured
+                            <td>Intro to radiology and its modalities: X-ray, CT, MRI. Extraction of structured
                                 information
                                 from
                                 radiology reports using NLP techniques. Automated report generation and summarization.
                                 <br /><br />
 
-                                <strong>Readings:</strong><br />
+                                <strong>Prerequisite readings:</strong><br />
                                 <ul>
                                     <li /><a href=https://arxiv.org/abs/1901.07031">
                                         CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert
@@ -337,7 +329,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 settings.
                                 Regulatory constraints.<br /><br />
 
-                                <strong>Readings:</strong><br />
+                                <strong>Prerequisite readings:</strong><br />
                                 <ul>
                                     <li /> <a href="https://www.aao.org/eyenet/article/augmented-intelligence">
                                         Augmented Intelligence: Harnessing AI for Glaucoma - American Academy of
@@ -352,11 +344,10 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                         <tr>
                             <td>12</td>
                             <td>Clinical Decision Support<br />(AB)</td>
-                            <td>What is clinical decision support. Using (and learning) clinical pathways. Dynamic
-                                treatment
-                                strategies. <br /><br /><strong>Assignment 3 Due</strong> <strong>Assignment 4
+                            <td>What is clinical decision support. Learning and applying clinical pathways. Dynamic
+                                treatment strategies. <br /><br /><strong>Assignment 3 Due</strong> <br/><strong>Assignment 4
                                     Out</strong>
-                                <br /><strong>Readings:</strong><br /> <br />
+                                <br /><strong>Prerequisite readings:</strong><br /> <br />
                                 <ul>
                                     <li /><a href="https://pubmed.ncbi.nlm.nih.gov/26419864/">Paving the COWpath:
                                         Learning
@@ -383,7 +374,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                         <tr>
                             <td>13</td>
                             <td>Time-series healthcare data<br />(Zach Lipton)</td>
-                            <td>TBD <br /><strong>Readings:</strong><br /><br />
+                            <td>TBD <br /><strong>Prerequisite readings:</strong><br /><br />
 
                                 <ul>
                                     <li /><a href="https://arxiv.org/pdf/2305.13426.pdf">Evaluating Model Performance in
@@ -404,7 +395,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                         <tr>
                             <td>14</td>
                             <td>Anomaly detection<br />(Milos Hauskrecht)</td>
-                            <td><br /><strong>Readings:</strong><br />
+                            <td><br /><strong>Prerequisite readings:</strong><br />
 
                                 <ul>
                                     <li /><a
@@ -426,7 +417,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                             <td>15</td>
                             <td>Structured Clinical Data<br />(AB)</td>
                             <td>Processing clinical data for machine learning. Deep Patient. <br /><br /><b>Assignment 4
-                                    Due</b><br /><strong>Readings:</strong><br />
+                                    Due</b><br /><strong>Prerequisite readings:</strong><br />
 
                                 <ul>
                                     <li /><a href="https://www.nature.com/articles/srep26094">Deep Patient: An
@@ -443,7 +434,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 Modern ML
                                 methods. Clinical embeddings using word2vec and BERT.<br /><br />
 
-                                <strong>Readings:</strong> <br />
+                                <strong>Prerequisite readings:</strong> <br />
                                 <ul>
                                     <li /><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6922053/">Clinical
                                         Concept
@@ -472,7 +463,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 reduction.
                                 Clustering. CNNs for sequence analysis. RNNs for time-sequence data.<br /><br />
 
-                                <strong>Readings:</strong>
+                                <strong>Prerequisite readings:</strong>
                                 <ul>
                                     <li /><a
                                         href="https://aacrjournals.org/cancerres/article/77/21/e115/662609/DeepPhe-A-Natural-Language-Processing-System-for">DeepPhe:
@@ -492,7 +483,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 of Us
                                 initiative. DL in Drug Discovery<br /><br />
 
-                                <strong>Readings:</strong><br />
+                                <strong>Prerequisite readings:</strong><br />
                                 <ul>
                                     <li />(Optional) <a
                                         href="https://aacrjournals.org/mcr/article/16/2/269/89839/Precision-Oncology-beyond-Targeted-Therapy">Precision
@@ -523,7 +514,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 in causal discovery. Covariate adjustment. &quot;Asthmatics admissions do better in the
                                 hospital&quot; fallacy. Simpson’s paradox.
 
-                                <br /><br /><strong>Readings:</strong><br />TBD
+                                <br /><br /><strong>Prerequisite readings:</strong><br />TBD
                             </td>
                         </tr>
                         <tr>
@@ -536,7 +527,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                                 Multi-armed bandit problem. REMAP-CAP project and applications to
                                 Covid19.<br /><br />
 
-                                <strong>Readings:</strong><br />
+                                <strong>Prerequisite readings:</strong><br />
                                 <ul>
                                     <li /><a href="https://www.nature.com/articles/nrd1927">Bayes Clinical Trials</a>
                                     <li /><a href="https://www.atsjournals.org/doi/10.1513/AnnalsATS.202003-192SD">The
@@ -551,7 +542,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                         <tr>
                             <td>22</td>
                             <td>Epidemiological modeling and forecasting<br /> (Roni Rosenfeld)</td>
-                            <td><br /> <strong>Readings:</strong><br /> TBD</td>
+                            <td><br /> <strong>Prerequisite readings:</strong><br /> TBD</td>
                         </tr>
                         <tr>
                             <td colspan="3" class="grey-background"><strong>Part 8: Wrap up</strong></td>
@@ -559,7 +550,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                         <tr>
                             <td>23</td>
                             <td>Ambient Scribe<br /> (Zack Lipton)</td>
-                            <td><br /><strong>Readings:</strong>
+                            <td><br /><strong>Prerequisite readings:</strong>
                                 <ul>
                                     <li /> <a
                                         href="https://static1.squarespace.com/static/59d5ac1780bd5ef9c396eda6/t/64d1b39ea8f777707fba6ffd/1691464606667/ID197_Research+Paper_2023.pdf">Generating
@@ -617,15 +608,15 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                 through
                 any problem than from copying its answer from a tool or other source. Much good can come from using
                 generative
-                AI, but much risk arises when you adopt the output of such a tool without completely understanding it.
+                AI, but much risk arises when you adopt the output of such a tool without completely understanding it.</p>
 
-                For the final project, you may work alone or in groups of two students at most. Groups should create a
+                <p>For the final project, you may work alone or in groups of two students at most. Groups should create a
                 single
-                poster/writeup.
+                poster/writeup.</p>
 
-                You may work alone or in groups for the assignments and final project. Each student must write up and
+                <p>You may work alone or in groups for the assignments. Each student must write up and
                 turn in
-                their own assignment. On every problem set, you must identify your collaborators. If you did not discuss
+                their own assignment. On every assignment, you must identify your collaborators. If you did not discuss
                 the
                 problem set with anyone, you should write “Collaborators: none." You must acknowledge all sources (e.g.
                 Wikipedia, a website, a genAI tool) in your assignment. It is a violation of this policy to submit a
@@ -635,6 +626,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                 cannot be tolerated in any academic environment. If you have any questions about the collaboration
                 policy, or if
                 you feel that you may have violated the policy, please talk to one of the course staff.</p>
+            </p>
 
             <b>Late Policy</b>
 
@@ -646,7 +638,8 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
                 tracking
                 and analysis that comes with a complicated late policy where each student gets a budget of late days to
                 use
-                during the semester.</p>
+                during the semester. Here and elsewhere, the course staff will apply the SCS "Reasonable Person Policy" and ask 
+            students to do the same.</p>
 
 
             <b>Pedagogical Sequencing</b>
@@ -662,7 +655,7 @@ NOTE: THIS WEB PAGE IS IN DRAFT FORM AND SUBJECT TO CHANGE. SYLLABUS, READINGS, 
 
             <b>Pass-Fail</b>
             <p>You are allowed to take this course as Pass/Fail; instructor permission is not required. What letter grade 
-            is the cutoff for a Pass will depend on your specific program; we do not specify whether or not you Pass but 
+            is the cutoff for a Pass will depend on your specific program; we do not specify whether or not you pass but 
             rather we compute your letter grade the same as everyone else in the class and your program converts that 
             letter grade to a Pass or Fail depending on their cutoff. Be sure to check with your program/department as 
             to whether you can count a Pass/Fail course towards your degree requirements.
