@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+    <style>
+        .grey-background {
+            background-color: #c0c0c0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a name="lecture2">Lecture 2</a>
+
+    <ol>
+
+        (Khan Academy video)
+        <li />Give 2 examples of payors in the healthcare ecosystem
+
+        <li />What's the difference between a premium and a co-pay. In each case, who pays and who receives the payment?
+
+        <li />What is the problem that co-pays are designed to address?
+
+        <li />How does the term 'moral hazard' relate to healthcare?
+
+        ("Biases in electronic health record data...")
+
+        <li />The paper describes a study that compares two different kinds of data to predict 3-year survival. What are
+        those two different kinds of data? Describe the experimental setup.
+
+        <li />Figure 3b shows that patients tested at 4 am with normal white blood cell count values have lower survival
+        (85.4%) than patients tested at 4 pm with either abnormally low (93.0%, P
+        <0.001) or high (91.4%, P<0.001) values. Using the same figure, can you draw an analogous conclusion about
+            patients who are tested at various frequencies (e.g. 1 hour vs 1 year) after a previous white blood cell
+            test? 
+            
+        <li /> The paper details several cases where healthcare processes create bias in a healthcare data
+        record. Can you think of a scenario where one might draw dangerously wrong conclusions from this biased data?
+        Can you think of a scenario where using this biased data can be helpful?
+
+    </ol>
+
+
+    <a name="lecture3">Lecture 3</a>
+    <ol>
+        (Razavrian et al)
+        <li/>What are the benefits of a parsimonious model?  What is a key disadvantage?
+        <li/>The paper uses only data sourced from a health insurance company (Blue Cross Independence of PA). Thje study did not use data from any hospital or clinic. What are some advantages they cite for this approach? Can you think of any drawbacks?
+        <li/>How do the authors assert that a higher-accuracy predictive algorithm would benefit the DPP?
+        <li/>The paper relies on a L1-regularized logistic regression model for predicting diabetes. In the discussion, they mention (without detail) that this approach was as good or better than other model forms, e.g. random forests and neural networks. Even assuming all the models had equivalent performance, why might you prefer a logistic regression model here?
+     </ol>
+
+
+     <a name="lecture4">Lecture 4</a>
+     none
+
+     <a name="lecture5">Lecture 5</a>
+     none
+     
+     <a name="lecture6">Lecture 6</a>
+     (Boag et al)
+     <ol>
+<li/> In section 5.2, the authors describe inconsistent timestamps in the MIMIC dataset.
+ Give an argument in favor of discarding such rows from your training data when building a classifier. Give an argument against doing so. 
+<li/> Section 5.4 describes the problem of duplication in notes. Their proposed solution (retaining only one note when multiple notes share the same timestamp) helps, 
+but does not entirely solve the problem, since providers often copy and paste previous notes into their own new progress note. How might this "copy-paste" habit introduce
+bias into the clinical record?
+
+(Obermeyer et al)
+<li/> Why does Figure 3b explain the difference in the orange and purple curves in Figure 2?
+<li/> The authors establish that future health costs are an unreliable proxy for future health status. What are some reasons he suggests for this?
+<li/> You are the VP of Care Management at UniCitna, a large health insurer which uses this algorithm to identify members who should receive additional services.  
+ Recognizing the disparity between Black and White members, you propose to adjust the threshold as follows:
+ 
+ OLD POLICY: patients above 97% are enrolled in the program, 
+
+ NEW POLICY: patients above 97% are enrolled in the program, but Black patients above 93% are enrolled in the program.
+
+ Why is this not an ideal solution?  
+     </ol>
+
+
+
+     <a name="lecture4">Lecture 7</a>
+     none
+
+     <a name="lecture5">Lecture 8</a>
+     none
+     
+
+     <a name="lecture4">Lecture 9</a>
+     none
+
+     <a name="lecture5">Lecture 10</a>
+     <ol>
+        (Chexpert)
+        <li/> The paper concedes that one limitation of the study is that neither the algorithm nor the expert radiologists (serving as a baseline) had access to the patient's clinical history, 
+        nor any previous exams. Think of a specific clinical scenario where this might be a serious limitation for a radiologist. Describe at a very high level (1-2 sentences) how you might design an enhanced model architecture that could take
+        into account previous findings? 
+        <li/>The authors spend some time describing how they assign one or more labels (e.g. "cardiomegaly" and "pleural effusion") to each image. They describe the shortcomings of this approach.
+        If you had infinite time and a panel of expert radiologists, how would you approach the labeling problem? 
+     </ol>
+     
+
+     <a name="lecture4">Lecture 11</a>
+     none
+
+     <a name="lecture5">Lecture 12</a>
+     <ol>
+        (Paving the COWPath)
+        <li/>The paper does not report on evaluating the quality of these derived clinical pathways. How might you design an experiment to measure (numerically) the quality of the derived pathways?
+        <li/>The paper describes "supernodes" which are tuples of (visit purpose, procedure, medication, diagnosis). There are 3276 unique supernode values. There will naturally be a lot of sparsity in
+        this data -- i.e. some supernodes which rarely or never occur in the data. How might you extend this approach to address this issue? 
+        <li/>How might you use the learned pathways in clinical practice?  
+        (The Artificial Intelligence Clinician Learns...)
+
+
+    </ol>>
+
+     <a name="lecture4">Lecture 13</a>
+     none
+
+     <a name="lecture5">Lecture 14</a>
+     none
+
+     <a name="lecture4">Lecture 15</a>
+     none
+
+     <a name="lecture5">Lecture 16</a>
+     none
+
+     <a name="lecture4">Lecture 17</a>
+     none
+
+     <a name="lecture5">Lecture 18</a>
+     none
+
+     <a name="lecture4">Lecture 19</a>
+     none
+
+     <a name="lecture5">Lecture 20</a>
+     none
+
+     <a name="lecture4">Lecture 21</a>
+     none
+
+     <a name="lecture5">Lecture 22</a>
+     none
+
+
+     <a name="lecture4">Lecture 23</a>
+     none
+
+     <a name="lecture5">Lecture 24</a>
+     none
+
+    </body>
+
+</html>
