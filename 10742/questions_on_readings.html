@@ -26,29 +26,13 @@
     <ol>
 
         <strong>(Khan Academy video)</strong>
-        <li />Give two examples of payors in the healthcare ecosystem.
+        <li />Give three examples of payors in the U.S. healthcare ecosystem.
 
         <li />Briefly define a premium, a co-pay, and a deductible. In the first two cases, who pays and who receives
         the payment?
 
-        <li />How does the term 'moral hazard' relate to healthcare and specifically to co-pays?
-
+        <li />How do co-pays attempt to address the issue of moral hazard in healthcare? 
         <br /><br />
-
-        <strong>(Biases in electronic health record data...)</strong>
-
-        <li />The paper describes a study that compares two different kinds of data to predict three-year survival. What
-        are
-        those two different kinds of data? Describe the experimental setup.
-
-        <li />Figure 3b in the paper shows that patients tested at 4am with normal white blood cell count values have
-        lower survival
-        (85.4%) than patients tested at 4pm with either abnormally low (93.0%, P
-        <0.001) or high (91.4%, P<0.001) values. Using the same figure, can you draw an analogous conclusion about
-            patients who are tested for the first time one hour or one year after a previous white blood cell test?
-            <li /> The paper details several cases where healthcare processes create bias in a healthcare data
-        record. Can you think of a scenario where one might draw dangerously wrong conclusions from this biased data?
-        Can you think of a scenario where using this biased data can be helpful?
 
     </ol>
 
@@ -56,28 +40,28 @@
     <a name="lecture3">Lecture 3</a>
     <ol>
         <strong>(Population-Level Prediction...)</strong>
-        <li />List up to three advantages a parsimonious model? What is one disadvantage?
-        <li />The paper uses only data sourced from a health insurance company (Blue Cross Independence of PA). Thje
+        <li />List three advantages of a parsimonious model. Name a disadvantage.
+        <li />The paper uses only data sourced from a health insurance company (Blue Cross Independence of PA). The
         study did not use data from any hospital or clinic.
         What are some advantages the authors cite for this approach? Can you think of any drawbacks?
         <li />How do the authors assert that a higher-accuracy predictive algorithm would benefit the DPP?
         <li />The paper relies on a L1-regularized logistic regression model for predicting diabetes.
         In the discussion, they mention (without detail) that this approach was as good or better than
         other model forms, e.g. random forests and neural networks. Even assuming all the models had
-        equivalent performance, why might you prefer a logistic regression model here, over a more complex,
-        non-linear model like xgboost or a neural network?
+        equivalent performance, why might you prefer a logistic regression model here, over a more complex 
+        model like xgboost or a neural network?
     </ol>
 
 
     <a name="lecture4">Lecture 4</a><br />
 
-    none
+    no required readings 
     <br /><br />
 
 
     <a name="lecture5">Lecture 5</a><br />
 
-    none
+    no required readings 
     <br /><br />
 
 
@@ -89,16 +73,16 @@
         <li /> In section 5.2, the authors describe inconsistent timestamps in the MIMIC dataset.
         Give an argument in favor of discarding such rows from your training data when building a classifier. Give an
         argument against doing so.
-        <li /> Section 5.4 describes the problem of duplication in notes. The proposed solution (retaining only one note
-        when multiple notes share the same timestamp) helps,
-        but does not entirely solve the problem, since providers often copy and paste previous notes into their own new
-        progress note, which creates redundancy in the
-        notes which can't be solved using the timestamp approach. How might this "copy-paste" habit introduce
-        bias into the clinical record? Give an argument against removing copy-pasted text.
+        <li /> Section 5.4 describes the problem of duplication in notes. The proposed solution---retaining only the latest
+        among a collection of notes sharing the same 'storetime' timestamp---eliminates redundant drafts of the same note. 
+        However, it doesn't entirely solve the duplicate-text problem, since providers often copy and paste sections of previous notes into a new
+        progress note. What kind of biases might this "copy-paste" habit 
+        introduce into the clinical record? If you could build a 100% reliable tool to identify text that was copy-pasted from a previous note, should 
+        we use that tool to remove copy-pasted text? Why or why not?
 
         <br /><br />
 
-        <strong>(Disseting Racial Bias...)</strong>
+        <strong>(Dissecting Racial Bias...)</strong>
         <li /> Why does Figure 3b explain the difference in the orange and purple curves in Figure 2?
         <li /> The authors establish that future health costs are an unreliable proxy for future health status. What is
         their argument for this?
@@ -112,7 +96,7 @@
             <li /> NEW POLICY: patients above the 97% threshold are enrolled in the program, and Black patients above a
             93% threshold are also enrolled in the program.
         </ul>
-        Give one or two arguments for and against this revised policy.
+        Give one argument for and oen argument against this revised policy.
     </ol>
 
     <a name="lecture4">Lecture 7</a><br />
