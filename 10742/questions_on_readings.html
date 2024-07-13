@@ -244,6 +244,21 @@
     none<br /><br />
 
     <a name="lecture4">Lecture 17</a><br />
+    <ol>
+    <strong>PRISM: Patient Records Interpretation for Semantic Clinical Trial Matching...</strong>
+    <li/>Figure 4a shows that when PRISM (using OncoLM) ranked trials for a given patient, in only ~60% of the time did the "ground truth trial" appear in the top 3. 
+    There are two obvious explanations for this, one unfavorable to PRISM and one favorable. What are they? Does paragraph under the heading  "Trial Level" (in Section 3.3) 
+    favor one or the other explanation? 
+    <li/> Referring to figure 1 in the supplementary material. Per the paper, the average agreement between medical doctors ("inter-annotator agreement") --calculated as the percentage of times the 
+    annotators gave same answer to a particular question among all five annotators -- was 64%. 
+    That's a pretty low number, and the annotators were only performing a rather narrow task: classify a chunk as answering 'yes' or 'no' to a given question. How might you 
+    address this issue? 
+    <strong>Zero-Shot Clinical Trial Patient Matching with LLMs</strong>
+    <li/>Section 3.3 describes the retrieval pipeline. What are some considerations in selecting a value for k?
+    <li/>UPMC Hillman Cancer Center sees about 140,000 patients every year. There are around 400,000 active trials at clinicaltrials.gov. Using back of the envelope math, 
+    sketch the rough costs of running this zero-shot clinical trial matching approach on all (patient, trial) pairs. Does the proposed pre-filtering approach in the paper 
+    fully address this problem? If not, what additional measure(s) would you propose, and where in the retrieval pipeline (M, Phi, or A) would it live? 
+    </ol>
     none<br /><br />
 
     <a name="lecture5">Lecture 18</a><br />
@@ -256,7 +271,19 @@
     none<br /><br />
 
     <a name="lecture4">Lecture 21</a><br />
-
+    <ol>
+        <strong>Bayesian clinical trials</strong>
+        <li/> In Figure 2, if we replace the non-informative prior with a highly opinionated prior where p(0)=1, how would the rest of the graphs look? 
+        (Note: this case is sometimes called the "tyranny of the prior")
+        <li/> On page 33, in the "What prior" box is this phrase: "it is not possible to find the probability of having a disease based on test results without
+        specifying the disease’s prevalence." Write this in terms of Bayes's rule. 
+        <strong>The REMAP-CAP...</strong>
+        <li/> The paper mentions (in Figure 1) that the REMAP platform can run "perpetually." What do they mean by this?
+        <li/>What is Response-Adaptive Randomization (RAR) and how is it implemented in REMAP-CAP?
+        <li/>Dr. Aarskog has developed a new gene therapy treatment for a rare disease. He would like to assess the efficacy of this treatment. Should 
+        she use REMAP? Why or why not?
+        <li/>List some ethical considerations in selecting a frequentist RCT vs. a Bayesian trial. Be sure to include one argument in favor and against the Bayesian approach.
+    </ol>
     <br /><br />
 
     <a name="lecture5">Lecture 22</a><br />
